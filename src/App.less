@@ -1,0 +1,143 @@
+@import './style/variables.less';
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color:@bg-color;
+  padding:100px 0;
+  @media (max-width:580px){
+    padding: 0 0;
+  }
+}
+.paragraph{
+  font-size: 14px;
+  font-family: 'Outfit';
+  font-weight: 400;
+  color: @paragraph-color;
+}
+.list-point{
+  position: relative;
+  top: 3px;
+  left: 5px;
+  font-size: 23px;
+  margin-right: 24px;
+  color: @fir-li-hd;
+}
+.main{
+  width: 580px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+  @media (max-width:580px) {
+    width:100%;
+    padding: 0;
+  }
+  .header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @media (max-width:580px) {
+    .textframe{
+      padding:0 20px;
+    }
+  }
+    h1{
+      font-family: 'young-serif';
+      font-weight: 400;
+      color:@h1-black;
+    }
+    img{
+      width: 100%;
+      border-radius: 10px;
+    }
+    .banner-list{
+      padding: 10px 20px;
+      margin: 10px 0 0 0;
+      line-height: 25px;      
+      border-radius: 10px;
+      background-color:@fir-li;
+      .listfir-hl{
+        font-family: 'outfit';
+        font-weight: 700;
+        color: @fir-li-hd;
+      }
+      ul{
+        list-style: none;
+      }
+    }
+  }
+  .ingredient-part{
+    border-bottom: 1px solid @bottom-line;
+    @media (max-width:580px) {
+    // width:100%;
+    padding: 20px;
+  }
+    ul{
+      list-style: none;
+      margin:6px 0 24px 0;
+    }
+    ul>li>span{
+      color: @h3-brown;
+    }
+  }
+  .instruction-part{
+    border-bottom: 1px solid @bottom-line;
+        @media (max-width:580px) {
+    // width:100%;
+    padding: 20px;
+  }
+    ol{
+      list-style: none;
+      padding-right: 10px;
+      margin:15px 0 24px 0;
+    }
+    ol>li{
+      display: flex;
+      flex-direction: row;
+      margin: 8px 0;
+    }
+    ol>li>p{
+       line-height: 20px;
+    }
+    ol>li>div{
+      color: @h3-brown;
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 18px;//调节序号上下
+    }
+  }
+  .nutrition-part{
+   @media (max-width:580px) {
+    // width:100%;
+    padding: 20px;
+  }
+    p{
+      margin: 10px 0;
+    }
+    table{
+      width: 100%;
+      border-collapse: collapse;
+    }
+    tr{
+      border-bottom:1px solid @bottom-line;
+      line-height: 35px;
+    }
+    tr:nth-of-type(4){
+      border: none;
+    }
+    .special-site{
+      position: relative;
+      left: 30px;
+    }
+    .special-color{
+      font-weight: 800;
+      color: @h3-brown;
+    }
+  }
+}
