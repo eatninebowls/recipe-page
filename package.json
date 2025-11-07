@@ -1,6 +1,6 @@
 {
   "name": "recipe-page",
-  "homepage": "https://eatninebowls.github.io/recipe-page/",
+  "homepage": "https://eatninebowls.github.io/recipe-page",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,8 +9,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy":"npm run dev",
-    "deploy":"gh-pages -d dist"
+    "predeploy": "npm run build",
+    "postbuild": "copy dist\\index.html dist\\404.html",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "less": "^4.4.2",
